@@ -7,32 +7,46 @@
 # Exercise 1
 # When you submit only include your final function: compare
 
-
-
-
+#Returns 1, -1, or 0 depending if x is greater than, less than, or equal to y (respectively)
+def compare(x, y):
+    if x > y:
+        return 1
+    elif x < y:
+        return -1
+    else: 
+        return 0
 
 ################################################################################
 # Exercise 2
 # When you submit only include your final function: hypotenuse
 # Do develop incrementally. Do not share here.
 
+from math import sqrt
 
-
-
+#Returns the length of right triangle hypotenuse given two legs as inputs.
+def hypotenuse(a, b):
+    c = sqrt(a**2 + b**2)
+    return c
 
 ################################################################################
 # Exercise 3
 # When you submit only include your final function: is_between
 
-
-
-
+#Returns TRUE x is less than or equal to y, and y is less than or equal to z.
+#Returns FALSE otherwise.
+def is_between(x, y, z):
+    if x <= y and y <= z:
+        return True
+    else: 
+        return False
 
 ################################################################################
 # Exercise 6
 # When you submit only include your final function: is_palindrome
 
 
+
+#will it work with even length numbers.
 
 
 
@@ -59,19 +73,19 @@ def main():
 
     ############################################################################
     # Uncomment the below to test and before commiting:
-    # # Exercise 1
-    # compare(1,1)
-    # compare(1,2)
-    # compare(2,1)
-    # # Exercise 2
-    # hypotenuse(1,1)
-    # hypotenuse(3,4)
-    # hypotenuse(1.2,12)
-    # # Exercise 3
-    # is_between(1,2,3)
-    # is_between(2,1,3)
-    # is_between(3,1,2)
-    # is_between(1,1,2)
+    #Exercise 1
+    compare(1,1)
+    compare(1,2)
+    compare(2,1)
+    # Exercise 2
+    hypotenuse(1,1)
+    hypotenuse(3,4)
+    hypotenuse(1.2,12)
+    # Exercise 3
+    is_between(1,2,3)
+    is_between(2,1,3)
+    is_between(3,1,2)
+    is_between(1,1,2)
     # # Exercise 6
     # is_palindrome("Python")
     # is_palindrome("evitative")
