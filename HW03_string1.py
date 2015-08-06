@@ -26,8 +26,12 @@
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
   # +++your code here+++
-  return
 
+  if count >= 10:
+    s = 'Number of donuts: many'
+  else:
+    s = 'Number of donuts: ' + str(count)
+  return s
 
 # B. both_ends
 # Given a string s, return a string made of the first 2
@@ -36,8 +40,11 @@ def donuts(count):
 # is less than 2, return instead the empty string.
 def both_ends(s):
   # +++your code here+++
-  return
-
+  if len(s) < 2:
+    return ''
+  else:
+    beg_end = s[0:2] + s[-2:]
+    return beg_end
 
 # C. fix_start
 # Given a string s, return a string
@@ -50,8 +57,11 @@ def both_ends(s):
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
   # +++your code here+++
-  return
-
+  firstChar = s[0]
+  s_lessFirstChar = s[1:]
+  s_lessFirstChar_withAst = s_lessFirstChar.replace(firstChar, '*')
+  s_withAst = firstChar + s_lessFirstChar_withAst
+  return s_withAst
 
 # D. MixUp
 # Given strings a and b, return a single string with a and b separated
@@ -62,8 +72,13 @@ def fix_start(s):
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
   # +++your code here+++
-  return
+  #Identify the first characters of strings a and b.
+  a_firstChars = a[0:2]
+  b_firstChars = b[0:2]
 
+  #Swap the first characters of a and b and return
+  psuedo_PigLatin = b_firstChars + a[2:] + ' ' + a_firstChars + b[2:]
+  return psuedo_PigLatin
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
